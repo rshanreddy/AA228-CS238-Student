@@ -36,7 +36,7 @@ def main():
 
 def compute(infile, outfile, k_max):
     sars_ = pd.read_csv(infile)
-    Q = np.zeros((S,A))
+    Q = np.zeros(int(S,A))
     for k in range(k_max):
         for idx, row in sars_.iterrows():
             s, a, r, s_ = row['s']-1, row['a']-1, row['r']-1, row['sp']-1
